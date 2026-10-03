@@ -1,0 +1,18 @@
+{
+  "name": "image_generation",
+  "version": "1.0",
+  "assistant_role": "Especialista em geracao de imagens por IA",
+  "required_fields": [
+    {"name": "produto", "type": "text", "question": "O que deve aparecer na imagem?"},
+    {"name": "publico_alvo", "type": "text", "question": "Para quem e a imagem?"},
+    {"name": "emocao_desejada", "type": "text", "question": "Qual emocao a imagem deve transmitir?"},
+    {"name": "canal_veiculacao", "type": "text", "question": "Onde a imagem sera usada (site, rede social, impresso)?"}
+  ],
+  "task_description": "Crie um prompt positivo e um prompt negativo para geracao de imagem via IA (Midjourney, DALL-E, Stable Diffusion). O prompt positivo deve descrever detalhadamente a cena, estilo, iluminacao, paleta de cores e composicao. O prompt negativo deve listar o que deve ser evitado.",
+  "output_format": "```markdown\n## Prompt Positivo\n...\n\n## Prompt Negativo\n...\n\n## Parametros Sugeridos\n- Modelo recomendado: ...\n- Aspect ratio: ...\n- Style: ...\n```",
+  "constraints_default": [
+    "NUNCA inclua textos no prompt positivo (a IA pode distorcer)",
+    "Maximo 200 caracteres no prompt negativo",
+    "EVITE descricoes contraditorias"
+  ]
+}

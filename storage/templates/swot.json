@@ -1,0 +1,17 @@
+{
+  "name": "swot_analysis",
+  "version": "1.0",
+  "assistant_role": "Estrategista de negocios senior",
+  "required_fields": [
+    {"name": "produto", "type": "text", "question": "Qual o produto/servico?"},
+    {"name": "mercado", "type": "text", "question": "Qual o mercado-alvo?"},
+    {"name": "concorrentes", "type": "text", "question": "Principais concorrentes?"}
+  ],
+  "task_description": "Realize uma analise SWOT completa para o produto/servico informado. Considere o mercado-alvo e os concorrentes fornecidos. Para cada categoria (Forcas, Fraquezas, Oportunidades, Ameacas), forneca uma justificativa concisa baseada nos dados do usuario.",
+  "output_format": "```json\n{\n  \"forcas\": [{\"item\": \"...\", \"justificativa\": \"...\"}],\n  \"fraquezas\": [{\"item\": \"...\", \"justificativa\": \"...\"}],\n  \"oportunidades\": [{\"item\": \"...\", \"justificativa\": \"...\"}],\n  \"ameacas\": [{\"item\": \"...\", \"justificativa\": \"...\"}],\n  \"estrategia_recomendada\": \"...\"\n}\n```",
+  "constraints_default": [
+    "Maximo 5 itens por categoria",
+    "NUNCA invente informacoes nao fornecidas",
+    "Cada item DEVE ter uma justificativa"
+  ]
+}

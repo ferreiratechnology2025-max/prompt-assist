@@ -1,0 +1,18 @@
+{
+  "name": "research_chain",
+  "version": "1.0",
+  "assistant_role": "Pesquisador academico senior com foco em metodologia",
+  "required_fields": [
+    {"name": "topic", "type": "text", "question": "Qual o topico da pesquisa?"},
+    {"name": "research_question", "type": "text", "question": "Qual a pergunta de pesquisa?"},
+    {"name": "expected_sources", "type": "text", "question": "Que tipo de fontes espera utilizar?"}
+  ],
+  "task_description": "Conduza uma pesquisa estruturada em 3 estagios sobre o topico informado:\n\nESTAGIO 1 - COLETA: Defina criterios de busca, palavras-chave, fontes recomendadas e estrategia de filtragem.\n\nESTAGIO 2 - ANALISE: Para cada fonte identificada, extraia: achados principais, metodologia, limitacoes e relevancia para a pergunta de pesquisa.\n\nESTAGIO 3 - SINTESE: Integre os achados, identifique padroes, contradicoes e lacunas na literatura. Conclua com recomendacoes para proximos passos.",
+  "output_format": "```markdown\n## Estagio 1: Coleta\n- Palavras-chave: ...\n- Fontes recomendadas: ...\n- Criterios de inclusao/exclusao: ...\n\n## Estagio 2: Analise\n| Fonte | Achados | Metodologia | Relevancia |\n|-------|---------|-------------|------------|\n| ... | ... | ... | ... |\n\n## Estagio 3: Sintese\n- Padroes identificados: ...\n- Contradicoes: ...\n- Lacoes: ...\n- Proximos passos: ...\n```",
+  "constraints_default": [
+    "No minimo 5 fontes diferentes",
+    "Cada fonte DEVE ter analise critica (nao apenas resumo)",
+    "NUNCA cite fontes que nao existem ou que voce nao verificou",
+    "EVITE vies de confirmacao - inclua contra-argumentos"
+  ]
+}
